@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Suprakash Saha - Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <!-- Embedded CSS -->
+    <style>
+      /* === Base Resets === */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #ffffff;
+        color: #1e293b;
+        line-height: 1.7;
+        scroll-behavior: smooth;
+      }
+
+      a { text-decoration: none; }
+
+      /* Header */
+      #header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+
+      #header h1 a {
+        color: #2563eb;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      #header nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      #header nav ul li {
+        margin-left: 20px;
+      }
+
+      #header nav ul li a {
+        color: #1e293b;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      #header nav ul li a:hover {
+        color: #2563eb;
+      }
+
+      /* Sections */
+      section {
+        padding: 120px 50px 80px;
+        animation: fadeIn 1.5s ease;
+      }
+
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #2563eb;
+      }
+
+      section p {
+        color: #334155;
+      }
+
+      /* Image styling */
+      .image.main img {
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #2563eb;
+        margin: 20px auto;
+        display: block;
+        animation: zoomIn 1.5s ease;
+      }
+
+      /* Education Section */
+        #about .education {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+        }
+
+        .education-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-left: 6px solid #2563eb;
+        padding: 20px;
+        border-radius: 12px;
+        transition: 0.3s ease;
+        animation: slideUp 1.2s ease;
+        }
+
+        .education-card:hover {
+        background: #e0f2fe;
+        transform: translateY(-6px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-card h3 {
+        color: #2563eb;
+        margin-bottom: 8px;
+        font-size: 18px;
+        }
+
+        .education-card span {
+        font-size: 14px;
+        color: #64748b;
+        display: block;
+        margin-bottom: 10px;
+        }
+
+        .education-card p {
+        font-size: 15px;
+        color: #334155;
+        }
+
+
+      /* Skills */
+      #skills ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      #skills li {
+        background: #f1f5f9;
+        margin: 8px 0;
+        padding: 10px 15px;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      #skills li:hover {
+        background: #2563eb;
+        color: #ffffff;
+        transform: translateX(5px);
+      }
+
+      /* Projects */
+      #projects .box {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        transition: 0.4s ease;
+        animation: slideUp 1.5s ease;
+        border: 1px solid #e2e8f0;
+      }
+
+      #projects .box h3 {
+        color: #2563eb;
+        margin-bottom: 10px;
+      }
+
+      #projects .box:hover {
+        background: #e0f2fe;
+        transform: translateY(-10px);
+      }
+
+      /* Contact */
+      #contact .button {
+        display: inline-block;
+        margin: 10px;
+        padding: 12px 24px;
+        border: 2px solid #2563eb;
+        border-radius: 30px;
+        color: #2563eb;
+        background: transparent;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      #contact .button:hover {
+        background: #2563eb;
+        color: #ffffff;
+        transform: scale(1.05);
+      }
+
+      /* Footer */
+      #footer {
+        text-align: center;
+        background: #f1f5f9;
+        padding: 20px;
+        color: #475569;
+        margin-top: 50px;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes zoomIn {
+        from { transform: scale(0.7); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+
+      @keyframes slideUp {
+        from { transform: translateY(30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        #header { padding: 15px 20px; }
+        section { padding: 100px 20px 50px; }
+        .image.main img { width: 200px; height: 200px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Header -->
+      <header id="header">
+        <h1><a href="#">Suprakash Saha</a></h1>
+        <nav class="links">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main">
+
+        <!-- Home -->
+        <section id="home" class="post">
+          <header class="major">
+            <span class="date">CSE (AIML) Student | Batch 2022-2026</span>
+            <h2>Hi, I'm <strong>Suprakash</strong> 👋</h2>
+            <p>A passionate engineering student specializing in Artificial Intelligence & Machine Learning.  
+              I love building intelligent systems, solving real-world problems, and exploring innovative technologies.
+            </p>
+          </header>
+          <div class="image main">
+            <img src="SUPRAKASH SAHA PASSPORT SIZE PHOTO.jpg" alt="Suprakash Saha" />
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="post">
+          <header class="major">
+            <h2>About Me</h2>
+          </header>
+          <p>
+            I’m a 3rd-year B.Tech student in Computer Science & Engineering (AI & ML) at Future Institute of Technology, MAKAUT.  
+            With a strong foundation in <b>Python, C++, and JavaScript</b>, I’m skilled at implementing machine learning algorithms  
+            and working with frameworks like <b>TensorFlow, and Scikit-learn</b>.  
+          </p><br><br>
+          <h3>Education</h3>
+            <div class="education">
+                <div class="education-card">
+                    <h3>B.Tech in CSE (AI & ML)</h3>
+                    <span>Future Institute of Technology, MAKAUT | 2022-2026</span>
+                    <p>Currently pursuing with <b>87.7%</b>. Specialized in Artificial Intelligence and Machine Learning.</p>
+                </div>
+            
+                <div class="education-card">
+                    <h3>Higher Secondary Education</h3>
+                    <span>Bidhannagar Govt. High School | 2020-2022</span>
+                    <p>Computer Science stream with <b>87%</b> marks.</p>
+                </div>
+            
+                <div class="education-card">
+                    <h3>Secondary Education</h3>
+                    <span>Murari Pukur Govt. Spon H.S. School | 2010-2020</span>
+                    <p>Completed with <b>87%</b> marks. Built strong academic foundation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="post">
+          <header class="major">
+            <h2>Skills</h2>
+          </header>
+          <div class="row">
+            <div class="col-6 col-12-small">
+              <ul>
+                <li>Python</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+                <li>Machine Learning Algorithms (MLP, CNN, K-Means, Regression)</li>
+              </ul>
+            </div>
+            <div class="col-6 col-12-small">
+              <ul>
+                <li>TensorFlow</li>
+                <li>Scikit-learn</li>
+                <li>NumPy, Matplotlib</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="post">
+          <header class="major">
+            <h2>Projects</h2>
+          </header>
+          <div class="row">
+            <div class="col-4 col-12-medium">
+              <div class="box">
+                <a href="https://colab.research.google.com/drive/1nGtVBBZI6st-t4TrGrju94iDnJCGTdSA?usp=sharing" target="_blank" rel="noopener noreferrer"><h3>Logistic Regression</h3></a>
+                <p>Implemented using Breast Cancer Wisconsin Dataset to aid in medical diagnosis.</p>
+              </div>
+            </div>
+            <div class="col-4 col-12-medium">
+              <div class="box">
+                <a href="https://colab.research.google.com/drive/1VqC7xVrtpMYx3MlA-iWwaESrPK4WmJ26?usp=sharing" target="_blank" rel="noopener noreferrer"><h3>CNN on CIFAR-10</h3></a>
+                <p>Image classification on 60,000 images across 10 object categories.</p>
+              </div>
+            </div>
+            <div class="col-4 col-12-medium">
+              <div class="box">
+                <a href="https://colab.research.google.com/drive/11BiitiIMH6vqHTqRIAomWEU8sRaeXYiI?usp=sharing" target="_blank" rel="noopener noreferrer"><h3>K-Means Clustering</h3></a>
+                <p>Clustered Iris Dataset (150 samples, 3 species) using Sepal/Petal features.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <!-- Contact -->
+<section id="contact" class="post">
+  <header class="major">
+    <h2>Contact Me</h2>
+  </header>
+  <p>Feel free to reach out through any of the following platforms:</p>
+  <ul class="actions">
+    <li><a href="mailto:suprakash.fit.2022@gmail.com" class="button">Personal Email</a></li>
+    <li><a href="mailto:suprakash.saha.fit.cseaiml22@teamfuture.in" class="button">College Email</a></li>
+    <li class="button">Phone : +91 8240150691
+    </li>
+    <li><a href="https://www.linkedin.com/in/suprakash-saha-83b99b2a6" target="_blank" class="button">LinkedIn</a></li>
+    <li><a href="https://github.com/SuprakashSaha" target="_blank" class="button">GitHub</a></li>
+  </ul>
+  <p style="margin-top:20px; font-weight:500; color:#475569;">
+    📍 Kolkata, India
+  </p>
+</section>
+
